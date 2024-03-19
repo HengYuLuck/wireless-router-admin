@@ -1,14 +1,14 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import PageNotFound from '../components/PageNotFound.vue';
 import home from '../view/home/home.vue';
-
+import Layout from '../layout/Layout.vue';
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
             path: '/',
-            redirect: '/home',
+            redirect: '/layout',
         },
         {
             name: 'home',
@@ -16,7 +16,12 @@ const router = createRouter({
             component: home,
         },
         {
-            path: '/:pathMatch(.*)*',
+            name: 'layout',
+            path: '/layout',
+            component: Layout,
+        },
+        {
+            path: '/:pathMatch(.*)*', // 这个路由规则要放在最后
             name: 'pageNotFound',
             component: PageNotFound,
         },
