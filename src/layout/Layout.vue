@@ -1,18 +1,12 @@
 <script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String,
-})
 
 </script>
 
 <template>
   <el-button type="primary">Primary</el-button>
+  <router-view />
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
-}
+
 </style>
