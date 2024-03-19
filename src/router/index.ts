@@ -1,7 +1,6 @@
-import {createRouter, createWebHistory} from 'vue-router'
-import PageNotFound from "../components/PageNotFound.vue";
-import Layout from "../layout/Layout.vue";
-import home from "../view/home/home.vue";
+import {createRouter, createWebHistory} from 'vue-router';
+import PageNotFound from '../components/PageNotFound.vue';
+import home from '../view/home/home.vue';
 
 
 const router = createRouter({
@@ -27,8 +26,8 @@ const router = createRouter({
         return {
             top: 0,
             behavior: 'smooth',
-        }
+        };
     },
-})
+});
 
-export default router
+export default router;
